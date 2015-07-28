@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>cockpit.ac</path>
+
+   
+<panel>
+  <path>Aircraft/EMB-712/Panel/pa28-panel.xml</path>
+  <bottom-left>
+    <x-m>1.925</x-m>
+    <y-m>-0.530</y-m>
+    <z-m>-0.320</z-m>
+  </bottom-left>
+  <bottom-right>
+    <x-m>1.925</x-m>
+    <y-m>0.530</y-m>
+    <z-m>-0.320</z-m>
+  </bottom-right>
+  <top-left>
+    <x-m>1.925</x-m>
+    <y-m>-0.530</y-m>
+    <z-m>0.372</z-m>
+  </top-left>
+</panel>
+
+<panel>
+  <path>Aircraft/EMB-712/Panel/power-quadrant-panel.xml</path>
+  <bottom-left>
+    <x-m>2.015</x-m>
+    <y-m>0.011</y-m>
+    <z-m>-0.01</z-m>
+  </bottom-left>
+  <bottom-right>
+    <x-m>2.015</x-m>
+    <y-m>0.090</y-m>
+    <z-m>-0.01</z-m>
+  </bottom-right>
+  <top-left>
+    <x-m>1.94</x-m>
+    <y-m>0.011</y-m>
+    <z-m>0.082</z-m>
+  </top-left>
+</panel>
+
+<panel>
+  <path>Aircraft/EMB-712/Panel/fuel-panel.xml</path>
+  <bottom-left>
+    <x-m>2.03</x-m>
+    <y-m>-0.56</y-m>
+    <z-m>-0.340</z-m>
+  </bottom-left>
+  <bottom-right>
+    <x-m>1.87</x-m>
+    <y-m>-0.56</y-m>
+    <z-m>-0.34</z-m>
+  </bottom-right>
+  <top-left>
+    <x-m>2.03</x-m>
+    <y-m>-0.58</y-m>
+    <z-m>-0.15</z-m>
+  </top-left>
+</panel>
+
+<panel>
+  <path>Aircraft/EMB-712/Panel/flaps-trim-panel.xml</path>
+  <bottom-left>
+    <x-m>2.445</x-m>
+    <y-m>-0.34</y-m>
+    <z-m>-0.26</z-m>
+  </bottom-left>
+  <bottom-right>
+    <x-m>2.445</x-m>
+    <y-m>0.28</y-m>
+    <z-m>-0.26</z-m>
+  </bottom-right>
+  <top-left>
+    <x-m>2.0</x-m>
+    <y-m>-0.34</y-m>
+    <z-m>-0.26</z-m>
+  </top-left>
+</panel>
+
+ <model>
+  <name>SWITCHES</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/SwitchPanel/switch_panel.xml</path>
+  <offsets>
+   <x-m>1.9312</x-m>
+   <y-m>0.120</y-m>
+   <z-m>0.102</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>PEDALS.L</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/Pedals/Pedals-L.xml</path>
+  <offsets>
+   <x-m>1.65</x-m>
+   <y-m>-0.315</y-m>
+   <z-m>-0.36</z-m>
+  </offsets>
+ </model>   
+
+ <model>
+  <name>PEDALS.R</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/Pedals/Pedals-R.xml</path>
+  <offsets>
+   <x-m>1.65</x-m>
+   <y-m>0.31</y-m>
+   <z-m>-0.36</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>FLAP-TRIM</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/FlapTrim/FlapTrim.xml</path>
+  <offsets>
+   <x-m>2.27</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.36</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>YokeLeft</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/yoke/yoke-pa28.xml</path>
+  <offsets>
+   <x-m>1.930</x-m>
+   <y-m>-0.235</y-m>
+   <z-m>0.102</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>YokeRight</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/yoke/yoke-pa28.xml</path>
+  <offsets>
+   <x-m>1.930</x-m>
+   <y-m>0.245</y-m>
+   <z-m>0.102</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>COMP</name>
+  <path>Aircraft/Instruments-3d/comp/comp.xml</path>
+  <offsets>
+   <x-m>1.930</x-m>
+   <y-m>0.000</y-m>
+   <z-m>0.432</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>CLOCK</name>
+  <path>Aircraft/Instruments-3d/clock/clock.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.4235</y-m>
+   <z-m>0.2585</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>ASI</name>
+  <path>Aircraft/Instruments-3d/asi/asi.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.334</y-m>
+   <z-m>0.271</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>AI</name>
+  <path>Aircraft/Instruments-3d/ai/ai.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.233</y-m>
+   <z-m>0.271</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>ALT</name>
+  <path>Aircraft/Instruments-3d/alt/alt.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.126</y-m>
+   <z-m>0.271</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>VOR1</name>
+  <path>Aircraft/Instruments-3d/vor/vor.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.029</y-m>
+   <z-m>0.271</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>VOR2</name>
+  <path>Aircraft/Instruments-3d/vor/vor2.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.028</y-m>
+   <z-m>0.183</z-m>
+  </offsets>
+ </model>
+
+ <!-- FIXME: set back for now -->
+ <model>
+  <name>ADF</name>
+  <path>Aircraft/Instruments-3d/adf/adf.xml</path>
+  <offsets>
+   <x-m>1.922</x-m>
+   <y-m>-0.434</y-m>
+   <z-m>0.183</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>TC</name>
+  <path>Aircraft/Instruments-3d/tc/tc.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.336</y-m>
+   <z-m>0.183</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>HI</name>
+  <path>Aircraft/Instruments-3d/hi/hi.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.232</y-m>
+   <z-m>0.183</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>VSI</name>
+  <path>Aircraft/Instruments-3d/vsi/vsi.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.126</y-m>
+   <z-m>0.183</z-m>
+  </offsets>
+ </model>
+
+ <!-- set back for now -->
+ <model>
+  <name>FUEL_OIL</name>
+  <path>Aircraft/Instruments-3d/pa28-fuel-oil/pa28-fuel-oil.xml</path>
+  <offsets>
+   <x-m>1.922</x-m>
+   <y-m>-0.100</y-m>
+   <z-m>0.102</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>EGT</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/egt/egt.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.2805</y-m>
+   <z-m>0.0205</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Primer</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/PrimerPump/primer.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.01435</y-m>
+   <z-m>0.01567</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>TACH</name>
+  <path>Aircraft/Instruments-3d/tach/tach.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.074</y-m>
+   <z-m>0.013</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>AMP</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/AMP/amp.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>0.1785</y-m>
+   <z-m>0.0145</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>VAC</name>
+  <path>Aircraft/Instruments-3d/vac/vac.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>0.437</y-m>
+   <z-m>0.237</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>mags</name>
+  <path>Aircraft/Instruments-3d/magneto-switch/mags.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.225</y-m>
+   <z-m>-0.0055</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>FlightCom</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/FlightCom/flightcom.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.155</y-m>
+   <z-m>0.013</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>HOBBS</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/Hobbs/hobbs.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>0.423</y-m>
+   <z-m>0.178</z-m>
+  </offsets>
+ </model>
+
+ <!--   Radio Stack  -->
+
+ <model>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/MarkerBeacon/MkrBcn.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>-0.05223</y-m>
+   <z-m>0.32864</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>kx165-1</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/radio_stack/kx165-1.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>0.123</y-m>
+   <z-m>0.32</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>kx165-2</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/radio_stack/kx165-2.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>0.123</y-m>
+   <z-m>0.265</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>dme</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/radio_stack/dme.xml</path>
+  <offsets>
+   <x-m>1.9312</x-m>
+   <y-m>0.123</y-m>
+   <z-m>0.213</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>KAP140</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/radio_stack/kap140/KAP140TwoAxisAlt.xml</path>
+  <offsets>
+   <x-m>1.9312</x-m>
+   <y-m>0.123</y-m>
+   <z-m>0.173</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>Transponder</name>
+  <path>Aircraft/Instruments-3d/kt70/kt70.xml</path>
+  <offsets>
+   <x-m>1.9312</x-m>
+   <y-m>0.292</y-m>
+   <z-m>0.28</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>kr87</name>
+  <path>Aircraft/EMB-712/Models/Cockpit/Instruments/radio_stack/kr87-adf/kr87.xml</path>
+  <offsets>
+   <x-m>1.925</x-m>
+   <y-m>0.292</y-m>
+   <z-m>0.24</z-m>
+  </offsets>
+ </model>
+ <!-- Garmin196 -->
+<model>
+   <path>Aircraft/Instruments-3d/garmin196/garmin196_support1.xml</path>
+   <offsets>
+    <x-m>1.925</x-m>
+   <y-m>-0.292</y-m>
+   <z-m>0.420</z-m>
+      <!--x-m>  0.235 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.253 </z-m-->
+   </offsets>
+</model>
+
+
+ <!-- Visible up to 10km (6mi) -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10000</max-m>
+ </animation>
+
+ <animation>
+  <name>InstrumentGroup</name>
+  <object-name>ASI</object-name>
+  <object-name>AI</object-name>
+  <object-name>ALT</object-name>
+  <object-name>VOR1</object-name>
+  <object-name>ADF</object-name>
+  <object-name>TC</object-name>
+  <object-name>HI</object-name>
+  <object-name>VSI</object-name>
+  <object-name>VOR2</object-name>
+  <object-name>TACH</object-name>
+  <object-name>FlightCom</object-name>
+  <object-name>VAC</object-name>
+  <object-name>AMP</object-name>
+  <object-name>HOBBS</object-name>
+  <object-name>FUEL_OIL</object-name>
+  <object-name>EGT</object-name>
+  <object-name>mags</object-name>
+ </animation>
+ 
+ <!-- Objects Ilumination -->
+ 
+  <animation>
+  <type>material</type>
+  <object-name>TakeoffPlacard</object-name>
+  <object-name>LandingPlacard</object-name>
+  <object-name>AC_Num</object-name>
+  <object-name>ManueveringPlacard</object-name>
+  <object-name>CompassLine</object-name>
+  <object-name>ThrottleQuadrant</object-name>
+  <object-name>FuelValvePointer</object-name>
+  <object-name>OFF-Placard</object-name>
+  <object-name>LeftTankPlacard</object-name>
+  <object-name>RightTankPlacard</object-name>
+  <object-name>RudderTrimPlacard</object-name>
+  <object-name>CarbHeatPlacard</object-name>
+  <emission>
+   <red>0.45</red>
+   <green>0.09</green>
+   <blue>0.00001</blue>
+   <factor-prop>sim/model/material/instruments/factor</factor-prop>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>PrimeFace</object-name>
+  <object-name>Throttle</object-name>
+  <object-name>Mixture</object-name>
+  <object-name>FuelValveFace</object-name>
+  <object-name>CompassCasing</object-name>
+  <object-name>CarbHeatKnob</object-name>
+  <object-name>CH-Lever</object-name>
+  <object-name>RudderTrim</object-name>
+  <object-name>RudderTrimIndicator</object-name>
+  <emission>
+   <red>0.1</red>
+   <green>0.02</green>
+   <blue>0.00001</blue>
+   <factor-prop>sim/model/material/instruments/factor</factor-prop>
+  </emission>
+ </animation>
+
+<!-- Animations -->
+
+<!-- Make the fuel selector valve move based on the value of switch-position 
+     The actual change in tank selection is done by pa28.nas which allows
+     cycling the selected tank by keyboard "f".-->
+ <animation>
+  <type>rotate</type>
+  <object-name>FuelValvePointer</object-name>
+  <offset-deg>-180</offset-deg>
+  <factor>-90</factor>
+  <property>controls/fuel/switch-position</property>  
+  <center>
+   <x-m>1.94707</x-m>
+   <y-m>-0.55448</y-m>
+   <z-m>-0.21952</z-m>
+  </center>
+  <axis>
+   <x>0.00042</x>
+   <y>0.01261</y>
+   <z>0.0018</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>ParkingBrakeControl</object-name>
+  <factor>35</factor>
+  <property>controls/gear/brake-parking</property>  
+  <center>
+   <x-m>1.891</x-m>
+   <y-m>-0.0</y-m>
+   <z-m>-0.0616</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>Throttle</object-name>
+  <property>controls/engines/engine[0]/throttle</property>
+  <factor>47</factor>
+  <center>
+   <x-m>1.937</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.02758</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Mixture</object-name>
+  <property>controls/engines/engine[0]/mixture</property>
+  <factor>47</factor>
+  <center>
+   <x-m>1.937</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.02758</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>CarbHeatKnob</object-name>
+  <object-name>CH-Lever</object-name>
+  <property>controls/anti-ice/engine/carb-heat[0]</property>
+  <factor>80</factor>
+  <offset-deg>-40</offset-deg>
+  <center>
+   <x-m>1.9055</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.01017</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation> 
+ 
+
+</PropertyList>

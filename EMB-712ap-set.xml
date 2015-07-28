@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Aircraft configuration file: Piper Cherokee Warrior II (1979 model)
+
+This file configures the airplane with full fuel, a 200 lb pilot, and
+a 150 lb copilot.  The plane starts with the mags on and the engine
+spinning.
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim include="help.xml"> 
+ 
+  <description>Embraer EMB-712 Tupi(AP)</description>
+  <author>David Megginson, Isaias Prestes, BR-NVS</author>
+  <status>alpha</status>
+
+  <!-- Use the YASim physics engine for the flight model -->
+
+  <flight-model archive="y">yasim</flight-model>
+  <aero archive="y">EMB-712</aero>
+
+
+  <!-- Use a 3D model with its own 3D cockpit (no 2D panel) -->
+  <panel>
+   <visibility archive="y">false</visibility>
+  </panel>
+
+	<model>
+		<path archive="y">Aircraft/EMB-712/Models/EMB-712ap.xml</path>
+		<livery>
+			<file type="string">Embraer</file>
+		</livery>
+		<wings>
+			<file type="string">Embraer</file>
+		</wings>
+		<!-- Adiciona o pushback -->
+		<pushback>
+			<kp type="double">100</kp>
+			<ki type="double">25</ki>
+			<kd type="double">0</kd>
+			<position-norm type="double">1</position-norm>
+		</pushback>
+	</model>
+
+  
+	<startup>
+		<splash-texture>Aircraft/EMB-712/splash.png</splash-texture>
+	</startup>
+  
+  <systems>
+   <autopilot>
+    <!--path>Aircraft/EMB-712/Systems/KAP140.xml</path-->
+   </autopilot>
+   <electrical>
+    <path></path>
+   </electrical>
+  </systems>
+
+  <!-- For now, use the Cessna 172 sound configuration (same engine) -->
+
+  <sound>
+   <path archive="y">Aircraft/EMB-712/EMB-712-sound.xml</path>
+  </sound>
+
+
+  <!-- Set the pilot's view position -->
+
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">-0.18</x-offset-m>
+     <y-offset-m archive="y">0.5</y-offset-m>
+     <z-offset-m archive="y">2.6</z-offset-m>
+     <pitch-offset-deg>-15</pitch-offset-deg>
+   </config>
+  </view>
+
+  <view n="1">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="2">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="3">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="4">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="5">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="6">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <weight n="0">
+    <name>Pilot</name>
+    <weight-lb>200</weight-lb>
+    <max-lb>300</max-lb>
+  </weight>
+  <weight n="1">
+    <name>Copilot</name>
+    <weight-lb>150</weight-lb>
+    <max-lb>300</max-lb>
+  </weight>
+  <weight n="2">
+    <name>Left Passenger</name>
+    <weight-lb>0</weight-lb>
+    <max-lb>300</max-lb>
+  </weight>
+  <weight n="3">
+    <name>Right Passenger</name>
+    <weight-lb>0</weight-lb>
+    <max-lb>300</max-lb>
+  </weight>
+  <weight n="4">
+    <name>Baggage</name>
+    <weight-lb>0</weight-lb>
+    <max-lb>200</max-lb>
+  </weight>
+  
+		<!-- Entradas para o menu de apoio para controle da aeronave -->
+		<menubar>
+			<default>
+				<menu n="100">
+					<label>Embraer EMB-712 Tupi</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Select Livery</label>
+						<binding>
+							<command>nasal</command>
+							<script>aircraft.livery.dialog.open()</script>
+						</binding>
+					</item>
+
+					<item>
+						<label>Lights</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/lights-config/dialog", "Aircraft/YF-17/Dialogs/lights-dialog.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>lightcontrol</dialog-name>
+						</binding>
+					</item>
+					
+					<item>
+						<label>Pushback</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+							  var dlg = gui.Dialog.new("/sim/gui/dialogs/pushback-config/dialog", "Aircraft/YF-17/Dialogs/pushback.xml");
+				       </script>
+						</binding>
+						<binding>
+							<command>dialog-show</command>
+							<dialog-name>pushback</dialog-name>
+						</binding>
+					</item>
+					<!--
+					<item>
+						<label>Ground Service</label>
+						<binding>
+							<command>nasal</command>
+							<script>groundservice.serviceonoff()</script>
+						</binding>
+					</item>
+					-->
+				</menu>
+			</default>
+		</menubar>
+  
+
+ </sim>
+
+
+ <!-- Allow the attitude indicator to tumble -->
+
+ <instrumentation>
+  <attitude-indicator>
+   <config>
+    <tumble-flag>true</tumble-flag>
+   </config>
+  </attitude-indicator>
+  <encoder>
+   <serviceable type="bool">true</serviceable>
+  </encoder>
+ </instrumentation>
+
+
+ <!-- Start with the magnetos off -->
+ <!-- Add a bit of fixed aileron trim to help fly level -->
+ <!-- Parking Brake set -->
+
+ <controls>
+  <electric>
+   <battery-switch type="bool">true</battery-switch>
+   <alternator-switch type="bool">true</alternator-switch>
+  </electric>
+  <engines>
+   <engine n="0">
+    <magnetos type="int">3</magnetos>
+   </engine>
+  </engines>
+  <flight>
+   <aileron-trim type="double">0.01</aileron-trim>
+   <elevator-trim type="double">0</elevator-trim>
+   <rudder-trim type="double">0</rudder-trim>
+  </flight>
+  <fuel>
+   <switch-position type="int">0</switch-position>
+  </fuel>
+  <gear>
+   <brake-parking type="double">0.0</brake-parking>
+  </gear>
+ </controls>
+
+
+ <!-- Start with the engine off -->
+
+ <engines>
+  <engine>
+   <rpm type="double">700.0</rpm>
+  </engine>
+ </engines>
+
+ <!-- Start with both tanks completely full -->
+ <consumables>
+  <fuel>
+   <tank n="0">
+    <name>Left</name>
+    <level-gal_us type="double">24</level-gal_us>
+    <selected type="bool">true</selected>
+   </tank>
+   <tank n="1">
+    <name>Right</name>
+    <level-gal_us type="double">24</level-gal_us>
+    <selected type="bool">false</selected>
+   </tank>
+  </fuel>
+ </consumables>
+
+ <input>
+
+  <keyboard>
+   <key n="102">
+   <name>f</name>
+   <desc>fuel tank select</desc>
+   <binding>
+    <command>nasal</command>
+     <script>pa28.fuel_switch()</script>
+   </binding>
+   </key>
+   
+  <key n="126">
+  <name>~</name>
+  <desc>Toggle Nav Lights</desc>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.nav_light_switch()</script>
+  </binding>
+  </key> 
+
+  <key n="33">
+  <name>!</name>
+  <desc>Toggle Battery Switch</desc>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.battery_switch()</script>
+  </binding>
+  </key> 
+
+  <key n="64">
+  <name>@</name>
+  <desc>Toggle Alternator Switch</desc>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.alternator_switch()</script>
+  </binding>
+  </key> 
+
+  <key n="35">
+  <name>#</name>
+  <desc>Toggle Fuel Pump</desc>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.f_pump_switch()</script>
+  </binding>
+  </key> 
+
+  <key n="36">
+  <name>$</name>
+  <desc>Toggle Landing Light</desc>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.landing_light_switch()</script>
+  </binding>
+  </key> 
+
+  <key n="37">
+  <name>%</name>
+  <desc>Toggle Fin Anti CLL Lights</desc>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.fin_strobe_light_switch()</script>
+  </binding>
+  </key>
+
+  <key n="94">
+  <name>^</name>
+  <desc>Toggle Wing Anti CLL Lights</desc>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.wing_strobe_light_switch()</script>
+  </binding>
+  </key>
+
+  <key n="42">
+  <name>*</name>
+  <desc>Toggle Pitot Heat</desc>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.pitot_heat_switch()</script>
+  </binding>
+  </key> 
+
+  <key n="40">
+  <name>(</name>
+  <desc>Increase Panel Lights</desc>
+  <repeatable>true</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.panel_light_switch(1)</script>
+  </binding>
+  </key> 
+
+  <key n="57">
+  <name>9</name>
+  <desc>Decrease Panel Lights</desc>
+  <repeatable>true</repeatable>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.panel_light_switch(-1)</script>
+  </binding>
+  </key> 
+
+  <key n="104">
+  <name>h</name>
+  <desc>Toggle Carb Heat</desc>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.carb_heat()</script>
+  </binding>
+  </key> 
+
+  <key n="16">
+  <name>ctrl-P</name>
+  <desc>Toggle Prime Pump</desc>
+  <binding>
+   <command>nasal</command>
+   <script>pa28.primer()</script>
+  </binding>
+  </key> 
+
+  <key n="115">
+  <name>s</name>
+  <desc>Toggle Starter Switch</desc>
+   <binding>
+     <command>property-assign</command>
+     <property>/controls/switches/starter</property>
+     <value >1</value>
+   </binding>
+   <mod-up>
+     <binding>
+       <command>property-assign</command>
+       <property>/controls/switches/starter</property>
+       <value>0</value>
+     </binding>
+   </mod-up>
+  </key>
+
+</keyboard> 
+
+</input>
+
+<nasal>
+
+  <pa28>
+    <file>Aircraft/EMB-712/Models/EMB-712.nas</file>
+    <file>Aircraft/EMB-712/EMB-712-electrical.nas</file>
+    <file>Aircraft/EMB-712/action-sim.nas</file>
+    <file>Aircraft/EMB-712/doors.nas</file>
+    <file>Aircraft/EMB-712/kr87.nas</file>
+    <file>Aircraft/EMB-712/Models/radio_stack/ki266.nas</file>
+    <script><![CDATA[ki266.new(0);]]></script>
+  </pa28>
+  <kap140>
+    <file>Aircraft/Generic/kap140.nas</file>
+  </kap140>
+	    <livery>
+	        <file>Aircraft/EMB-712/Nasal/livery.nas</file>
+	    </livery>
+		<general>
+			<file>Aircraft/EMB-712/Nasal/general.nas</file>
+		</general>
+		<lights>
+			<file>Aircraft/EMB-712/Nasal/lights.nas</file>
+		</lights>
+
+</nasal>
+
+
+</PropertyList>
+
+<!-- end of EMB-712-set.xml -->

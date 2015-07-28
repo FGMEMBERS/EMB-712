@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+  File:     O-360-A4M.xml
+  Author:   Aero-Matic v 0.82
+
+  Inputs:
+    name:           O-360-A4M 
+    type:           piston
+    power:          180 hp
+    augmented?      no
+    injected?       no
+    
+    Lycoming O-360-A4A with carburetor setting 10-5193.
+    
+   * Type Certificate Data Sheet Information - TCDS Number: 2A13
+     Revision Number: 50	Revision Date: 24/06/2010 	
+     Responsible Office: ACE-115A Atlanta Aircraft Certification Office Tel: (404) 474-5500
+ 	 TC Holder: Piper Aircraft, Inc.
+ 	    http://www.airweb.faa.gov/Regulatory_and_Guidance_library/rgMakeModel.nsf/0/21ae845820577b998625774d005339f2/$FILE/2A13.pdf
+
+ 	 TCDS - E-286 Revision 19 - http://monrv-3.fr/docs/o360.pdf
+-->
+
+<piston_engine name="O-360-A4M">
+  <minmp unit="INHG">          6.5 </minmp>
+  <maxmp unit="INHG">         28.5 </maxmp>
+  <displacement unit="IN3">  360.0 </displacement>
+  <maxhp>        180.00 </maxhp>
+  <cycles>         4.0 </cycles>
+  <idlerpm>      700.0 </idlerpm>
+  <maxrpm>      2700.0 </maxrpm>
+  <maxthrottle>    1.0 </maxthrottle><!-- Deprecated -->
+  <minthrottle>    0.1 </minthrottle><!-- Deprecated -->
+  <sparkfaildrop>  0.1 </sparkfaildrop>
+  <volumetric-efficiency> 0.85 </volumetric-efficiency>
+<!-- Optional items that affect engine performance -->
+ <!-- Defining <bsfc> over-rides the built-in horsepower calculations -->
+ <!--<bsfc>           0.435 </bsfc>-->
+ <!--<stroke unit="IN">  4.375  </stroke>-->
+ <!--<bore unit="IN">    5.125 </bore>-->
+ <!--<cylinders>         4.0  </cylinders>-->
+ <!--<compression-ratio> 8.0 </compression-ratio>-->
+</piston_engine>
